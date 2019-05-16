@@ -38,6 +38,7 @@ integration_tests = [
 
 all_tests = simple_tests + integration_tests
 
+# dictionary mapping configs to lists of tests
 test_permutations = {
     'fake_hash': ['full-test'],
     'test_postake_snarkless': simple_tests,
@@ -52,6 +53,7 @@ test_permutations = {
     'test_postake_txns': ['coda-shared-state-test', 'coda-batch-payment-test'],
     'test_postake_five_even_snarkless': ['coda-shared-prefix-multiproposer-test -num-proposers 5'],
     'test_postake_five_even_txns': ['coda-shared-prefix-multiproposer-test -num-proposers 5 -payments'],
+    'test_postake_delegation': ['coda-delegation-test'],
 }
 
 ci_blacklist = []
